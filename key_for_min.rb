@@ -7,7 +7,9 @@ require 'pry'
 hash = {:blake => 500, :ashley => 2, :adam => 1}
 
 def key_for_min_value(name_hash)
-  else name_hash.empty? 
+  if name_hash.empty? 
+    nil 
+  else 
     value_array = name_hash.collect { |name, value|
       value 
     }
