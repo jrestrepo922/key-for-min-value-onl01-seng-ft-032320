@@ -12,7 +12,7 @@ def key_for_min_value(name_hash)
   }
   sort_value_array = value_array.sort
   smallest_value = sort_value_array.first 
-  puts smallest_value
+  puts hash
 end
 
 key_for_min_value(hash)
