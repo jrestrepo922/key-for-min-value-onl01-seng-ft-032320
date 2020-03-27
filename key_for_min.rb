@@ -7,17 +7,18 @@ require 'pry'
 hash = {:blake => 500, :ashley => 2, :adam => 1}
 
 def key_for_min_value(name_hash)
-  value_array = name_hash.collect { |name, value|
-    value 
-  }
-  sort_value_array = value_array.sort
-  smallest_value = sort_value_array.first 
-  
-  name_hash.collect { |name, value|
-    if smallest_value = value 
-      return name
-    end 
-  }
+  if name_hash 
+    value_array = name_hash.collect { |name, value|
+      value 
+    }
+    sort_value_array = value_array.sort
+    smallest_value = sort_value_array.first 
+    
+    name_hash.collect { |name, value|
+      if smallest_value = value 
+        return name
+      end 
+    }
 end
 
 key_for_min_value(hash)
