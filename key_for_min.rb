@@ -17,7 +17,7 @@ def key_for_min_value(name_hash)
     smallest_value = sort_value_array.first 
     
     name_hash.collect { |name, value|
-      if smallest_value = value 
+      if smallest_value == value 
         return name
       end 
     }
