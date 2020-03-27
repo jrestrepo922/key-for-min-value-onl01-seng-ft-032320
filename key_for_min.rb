@@ -12,7 +12,12 @@ def key_for_min_value(name_hash)
   }
   sort_value_array = value_array.sort
   smallest_value = sort_value_array.first 
-  puts name_hash
+  
+  name_hash.collect { |name, value|
+    if smallest_value = value 
+      return name
+    end 
+  }
 end
 
 key_for_min_value(hash)
