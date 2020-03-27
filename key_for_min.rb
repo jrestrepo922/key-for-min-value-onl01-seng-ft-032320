@@ -10,7 +10,9 @@ def key_for_min_value(name_hash)
   value_array = name_hash.collect { |name, value|
     value 
   }
-  binding.pry
+  sort_value_array = value_array.sort
+  smallest_value = sort_value_array.first 
+  puts smallest_value
 end
 
 
